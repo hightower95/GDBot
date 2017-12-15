@@ -38,4 +38,4 @@ async def ping(*args):
 async def stupid(user):
     await client.say(user + ' is stupid')
 
-client.run('MzkxMjYwMDE5MjM4MjQwMjU2.DRWEzQ.-LnRCtdmH5p42xJYCQvt-G4q91I')
+client.run('YOUR TOKEN HERE')
