@@ -42,7 +42,7 @@ async def stupid(user=None):
     except Exception:
         await bot.say("Who's stupid?")
 
-token_file = open("token", "r")
+token_file = open("token.txt", "r")
 token = token_file.readline()
 token_file.close()
 
