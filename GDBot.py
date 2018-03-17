@@ -5,12 +5,12 @@ from discord.ext import commands
 import platform
 import glob
 
-
-# Here you can modify the bot's prefix and description and whether it sends help in direct messages or not.
+# Here you can modify the bot's prefix and description and whether it sends help in direct messages
+# or not.
 bot = Bot(description="chat_bot by King-Pie#8803", command_prefix="!", pm_help=True)
 
-# This is what happens everytime the bot launches. In this case, it prints information like server count, user count
-# the bot is connected to, and the bot id in the console.
+# This is what happens everytime the bot launches. In this case, it prints information like
+# server count, user count the bot is connected to, and the bot id in the console.
 
 
 @bot.event
