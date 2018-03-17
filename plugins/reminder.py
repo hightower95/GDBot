@@ -77,15 +77,13 @@ class ReminderManager:
             hour_now = time_now.hour
             minute_now = time_now.minute
 
-            print(time_now)
-
             for reminder in self.reminder_list:
 
                     if dow == reminder.dow and \
                             hour_now == reminder.reminder_hour and \
                             minute_now == reminder.reminder_minute:
 
-                        print('Sending the announcement now!')
+                        print('Sending an announcement now!')
 
                         await self.bot.send_message(self.channel, reminder.message)
                         print('Pausing')
