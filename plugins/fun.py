@@ -32,7 +32,7 @@ class Fun:
 
     @stupid.error
     async def lookup_error(self, ctx, error):
-            await self.bot.say("Who's stupid?")
+            await self.bot.say("Who's stupid? (the format should be !stupid username)")
 
 
 def setup(bot):
