@@ -16,17 +16,22 @@ class Fun:
         """ Pong! """
         await self.bot.say(":ping_pong: Pong!")
 
-    @commands.command()
-    async def stupid(self, member: discord.Member):
+    @commands.command(pass_context=True)
+    async def stupid(self, ctx, member: discord.Member, *args):
         """ Says that a user is stupid """
 
         me = discord.utils.get(member.server.members, name='King-Pie')
         ht = discord.utils.get(member.server.members, name='hightower')
+        bot = discord.utils.get(member.server.members, name='GDBot')
+
+        author = ctx.message.author
 
         if member == me:
             await self.bot.say('{0.mention}'.format(member) + " is really smart!")
         elif member == ht:
             await self.bot.say('{0.mention}'.format(member) + " is really stupid!")
+        elif member == bot:
+            await self.bot.say('{0.mention}'.format(author) + " is stupid!")
         else:
             await self.bot.say('{0.mention}'.format(member) + " is stupid!")
 
