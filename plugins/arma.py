@@ -22,7 +22,7 @@ class Arma:
 
     @commands.command()
     async def server(self, *args):
-        """" Reply with TS and Arma server info """
+        """ Reply with TS and Arma server info """
         await self.bot.say('**Teamspeak** \n'
                            'IP: ts.generallydangerous.com \n'
                            '**A3 Server** \n'
