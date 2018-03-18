@@ -14,16 +14,22 @@ class Config:
         config_sections = {"Credentials", "Chat"}.difference(config.sections())
 
         # Credentials
-        self.login_token = config.get('Credentials', 'Token', fallback=ConfigDefaults.token)
+        self.login_token = config.get('Credentials', 'Token',
+                                      fallback=ConfigDefaults.token)
 
         # Chat
-        self.command_prefix = config.get('Chat', 'CommandPrefix', fallback=ConfigDefaults.command_prefix)
+        self.command_prefix = config.get('Chat', 'CommandPrefix',
+                                         fallback=ConfigDefaults.command_prefix)
+        self.announcement_channel_id = config.get('Chat', 'AnnouncementChannelID',
+                                                  fallback=ConfigDefaults.announcement_channel_id)
 
 
 class ConfigDefaults:
 
+    # Credentials
     token = None
 
+    # Chat
     command_prefix = '!'
-
+    announcement_channel_id = None
 
