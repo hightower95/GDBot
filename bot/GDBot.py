@@ -1,15 +1,18 @@
 import discord
-import asyncio
 from discord.ext.commands import Bot
-from discord.ext import commands
 import platform
 import glob
 
+from bot.config import Config, ConfigDefaults
+
+# Loading the configuration file
+config = Config('../config/config.ini')
+
 # Here you can modify the bot's prefix and description and whether it sends help in direct messages
 # or not.
-bot = Bot(description="chat_bot by King-Pie#8803", command_prefix="!", pm_help=True)
+bot = Bot(description="chat_bot by King-Pie#8803", command_prefix=config.command_prefix, pm_help=True)
 
-# This is what happens everytime the bot launches. In this case, it prints information like
+# This is what happens every time the bot launches. In this case, it prints information like
 # server count, user count the bot is connected to, and the bot id in the console.
 
 
@@ -37,8 +40,8 @@ def load_cogs():
     cogs = list_cogs()
     for cogs in cogs:
         try:
-            bot.load_extension(cogs)
             print("Load {}".format(cogs))
+            bot.load_extension(cogs)
         except Exception as e:
             print(e)
 
@@ -54,8 +57,5 @@ def list_cogs():
     return clean
 
 
-token_file = open("token.txt", "r")
-token = token_file.readline()
-token_file.close()
-
-bot.run(str(token))
+# Finally run the bot with token from config file
+bot.run(config.login_token)
