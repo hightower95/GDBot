@@ -1,12 +1,14 @@
-from discord.ext import commands
 import discord
 import asyncio
 from datetime import datetime
 import calendar
-import pytz
 from pytz import timezone
 
 from config import Config, ConfigDefaults
+
+'''
+Plugin which sends reminders to a discord server's announcements channel
+'''
 
 # Load the configuration file
 config = Config('../config/config.ini')
@@ -96,6 +98,7 @@ class ReminderManager:
                         print('Resuming')
 
             await asyncio.sleep(30)
+
 
 def setup(bot):
 

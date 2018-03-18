@@ -1,6 +1,8 @@
-import discord
 import configparser
 
+'''
+Configuration file reader
+'''
 
 class Config:
 

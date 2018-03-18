@@ -1,9 +1,9 @@
-import discord
 from discord.ext import commands
 
 
 '''
-Placeholder cog for future development
+Plugin currently for providing information about the Generally Dangerous Arma 3 server
+Future plans for this plugin involve interaction with the server itself
 '''
 
 
@@ -25,7 +25,7 @@ class Arma:
         """ Reply with TS and Arma server info """
         await self.bot.say('**Teamspeak** \n'
                            'IP: ts.generallydangerous.com \n'
-                           '**A3 Server** \n'
+                           '**Arma 3 Server** \n'
                            'IP: a3.generallydangerous.com:2302 \n'
                            'Password: GD')
 
