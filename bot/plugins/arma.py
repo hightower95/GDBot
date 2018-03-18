@@ -29,5 +29,18 @@ class Arma:
                            'IP: a3.generallydangerous.com:2302 \n'
                            'Password: GD')
 
+    @commands.command()
+    async def mission_list(self, *args):
+        """ Reply with links to our mission spreadsheets """
+        await self.bot.say("Here are links to the Master and Seeder Mission spreadsheets. If you have a new mission, "
+                           "add it to seeder spreadsheet first so it can be checked over. \n \n"
+                           "**Missions Spreadsheet Master:** \n "
+                           "https://docs.google.com/spreadsheets/d/"
+                           "1mEhDKRgxhWuS7dCICNBW41zPeD7fcYft3Wb4fGeceRI/edit?usp=sharing \n"
+                           "**Missions Spreadsheet Seeder** \n"
+                           "https://docs.google.com/spreadsheets/d/"
+                           "1_txOtbOIbEZFMsIJjjZrAVtgn8L7o0P4kkEinOpsck4/edit?usp=sharing")
+
+
 def setup(bot):
     bot.add_cog(Arma(bot))
