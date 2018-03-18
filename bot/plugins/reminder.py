@@ -6,6 +6,11 @@ import calendar
 import pytz
 from pytz import timezone
 
+from config import Config, ConfigDefaults
+
+# Load the configuration file
+config = Config('../config/config.ini')
+
 
 class Reminder:
 
@@ -38,7 +43,7 @@ class ReminderManager:
     def __init__(self, bot):
 
         # channel to post announcements to
-        self.channel = discord.Object(id='391599892755120153')
+        self.channel = discord.Object(id=config.announcement_channel_id)
 
         self.bot = bot
         self.loop = asyncio.get_event_loop()
