@@ -30,7 +30,7 @@ class Arma:
                            'Password: GD')
 
     @commands.command()
-    async def mission_list(self, *args):
+    async def missions(self, *args):
         """ Reply with links to our mission spreadsheets """
         await self.bot.say("Here are links to the Master and Seeder Mission spreadsheets. If you have a new mission, "
                            "add it to seeder spreadsheet first so it can be checked over. \n \n"
