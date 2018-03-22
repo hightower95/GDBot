@@ -4,10 +4,10 @@
 
 [Credentials]
 # This is your Discord bot account token.
-Token = NDI0ODk5NjEzMjc1OTc5Nzg2.DY_mQA.Kawi9Q-wvFkMRxooM_Y2zmQm1pg
+Token = None
 
 [Chat]
 # Determines the prefix that must be used before commands in the Discord chat.
 # e.g if you set this to *, the play command would be triggered using *play.
-CommandPrefix = ?
-AnnouncementChannelID = 391599892755120153
+CommandPrefix = !
+AnnouncementChannelID = None

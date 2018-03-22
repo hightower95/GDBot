@@ -2,14 +2,26 @@ import discord
 from discord.ext.commands import Bot
 import platform
 import glob
+import os
+import shutil
 
 from config import Config, ConfigDefaults
 
 
 if __name__ == "__main__":
 
-    # Load the configuration file
-    config = Config('../config/config.ini')
+    # TODO raise an error if the config file is not configured properly
+
+    config_path = '../config/config.ini'
+    config_template_path = '../config/config.ini.template'
+    # Check if the config file exists
+    if os.path.isfile(config_path):
+        # Load the configuration file
+        config = Config(config_path)
+    else:
+        # Copy the config template and rename - then load default
+        shutil.copy2(config_template_path, config_path)
+        config = Config(config_path)
 
     # Here you can modify the bot's prefix and description and whether it sends help in direct messages
     # or not.
