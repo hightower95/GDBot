@@ -1,8 +1,6 @@
-import discord
 from discord.ext import commands
 from datetime import datetime
 from pytz import timezone
-import unicodedata
 
 '''
 A few useful commands and functions
