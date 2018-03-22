@@ -18,7 +18,7 @@ class Fun:
 
     @commands.command(pass_context=True)
     async def stupid(self, ctx, member: discord.Member, *args):
-        """ Says that a user is stupid """
+        """Insult another user"""
 
         me = discord.utils.get(member.server.members, name='King-Pie')
         ht = discord.utils.get(member.server.members, name='hightower')
