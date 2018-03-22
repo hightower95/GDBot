@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from datetime import datetime
 from pytz import timezone
+import unicodedata
 
 '''
 A few useful commands and functions
@@ -19,7 +20,9 @@ class Utility:
 
         time_now = datetime.now(tz=timezone('Europe/London')).strftime('%c')
         author = ctx.message.author
-        write_string = time_now + ' | ' + str(author) + ' | ' + repr(message)
+
+        stripped_message = message.encode('ascii', 'ignore').decode("utf-8")
+        write_string = time_now + ' | ' + str(author) + ' | ' + str(stripped_message)
 
         with open('../data/suggestions.txt', 'a') as suggestions_file:
             suggestions_file.write(write_string+'\n')
