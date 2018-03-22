@@ -9,16 +9,14 @@
 
     "setting":
             ["during the ${tod}", "in the ${tod}", "on a rainy ${tod}", "on a clear ${tod}", "on a windy ${tod}",
-              "on an overcast ${tod}",
+              "on an overcast ${tod}", "on a winter's ${tod}", "on a summer's ${tod}",
               "at dusk", "at dawn", "during a solar eclipse", "on a moonlit night", "during a thunderstorm",
-              "on a calm, peaceful Tuesday", "on Christmas Eve"
+              "on a calm, peaceful Tuesday", "on Christmas Eve", "on Siaric's birthday"
             ],
 
     "faction":
             [
-              "US",
-              "Russian",
-              "Police"
+              "US", "Russian", "Police"
             ],
 
     "location_small":
@@ -29,7 +27,15 @@
               "aircraft hanger",
               "town square",
               "police station",
-              "fire station"
+              "fire station",
+              "farmhouse",
+              "factory",
+              "villa",
+              "warehouse",
+              "HQ",
+              "church",
+              "mosque",
+              "bunker"
             ],
 
     "location_mid":
@@ -37,12 +43,15 @@
               "village",
               "FOB",
               "airfield",
-              "neighborhood"
+              "neighborhood",
+              "military base",
+              "port"
             ],
 
     "location_large":
             [
-              "town"
+              "town",
+              "city"
             ],
 
     "transport_vehicle":
@@ -53,12 +62,13 @@
               "technical",
               "assault boat",
               "personnel truck",
-              "jetski"
+              "jetski",
+              "ATV"
             ],
 
     "vehicle":
             [
-              "attack helicopter",
+              "helicopter",
               "tank",
               "APC",
               "technical",
@@ -68,7 +78,6 @@
 
     "support":
             [
-              "armour",
               "attack helicopter",
               "mortar",
               "CAS",
@@ -79,13 +88,14 @@
 
     "equipment":
             [
-              "radios", "NVGs", "optics"
+              "radios", "NVGs", "optics", "GPSs", "compasses"
             ],
 
     "squad_support":
             [
               "a recon/sniper team",
               "a portable MG",
+              "plenty of AT",
               "a backpack full of bananas"
             ],
 
@@ -98,7 +108,10 @@
               "fuel truck",
               "mortar position",
               "helicopter",
-              "radio tower"
+              "radio tower",
+              "experimental aircraft",
+              "command centre",
+              "weapons cache"
             ],
 
     "intel":
@@ -116,21 +129,25 @@
               "the President",
               "Bravo squad",
               "a VIP called Janice",
-              "Cilax's cat"
+              "a friendly injured squad"
             ],
 
     "support_template":
             [
-              "The squad is operating in enemy territory and so there is no support available.",
               "There is ${support} support available.",
-              "For extra support, the squad has ${squad_support}."
+              "For extra support, the squad has ${squad_support}.",
+              "The squad has vehicle support from a ${vehicle}"
             ],
 
     "enemy_template":
             [
               "Enemy forces are likely to be fielding ${vehicle}s.",
               "Enemy reinforcements can be expected from a nearby base.",
-              "The enemy are well fortified with bunkers and sandbags."
+              "The enemy is capable of paradropping reinforcements into the AO.",
+              "The enemy are well fortified with bunkers and sandbags.",
+              "The enemy have been alerted of the squad's presence and will be well prepared.",
+              "Our forces have caught the enemy unawares, they are not yet alerted to our presence.",
+              "Enemy forces have deployed extensive minefields in the AO."
             ],
 
     "equipment_template":
@@ -143,16 +160,19 @@
     "intro_template":
             [
               "**Operation ${operation_name}**: An elite ${faction} squad is being deployed via ${transport_vehicle} ${setting}.",
-              "**Operation ${operation_name}**: Bravo squad have botched their mission again and our ${faction} squad have to clean up the mess."
+              "**Operation ${operation_name}**: Bravo squad have botched their mission again and our ${faction} squad have to clean up the mess.",
+              "**Operation ${operation_name}**: In response to enemy movements, ${faction} forces are deploying a squad via ${transport_vehicle} ${setting}.",
+              "**Operation ${operation_name}**: During a routine patrol ${setting}, our ${faction} squad has received an urgent message from HQ."
             ],
 
     "mission_template":
             [
               "attack an enemy ${location_small} and retrieve ${intel}.",
               "assault an enemy ${location_small} and rescue ${hostages}.",
+              "assault and clear a fortified enemy ${location_mid}.",
               "defend a friendly ${location_small} from incoming forces.",
               "find and destroy an enemy ${target} in a nearby ${location_mid}.",
-              "destroy multiple known enemy ${target}s in a nearby ${location_large}."
+              "destroy multiple known enemy ${target}s and ${target}s in a nearby ${location_large}."
             ],
 
     "bonus_template":
@@ -165,14 +185,18 @@
     "completion_template":
             [
               "This is a time limited mission, so the squad must hurry!",
-              "The squad must complete their objectives and extract via ${transport_vehicle}.",
-              "Medical supplies are low and too many casualties will result in failure."
+              "The squad must complete their objectives and extract by ${transport_vehicle}.",
+              "The squad must complete their objectives and extract by any means necessary.",
+              "The squad must complete their objectives and retreat to a friendly ${location_mid}.",
+              "Medical supplies are low and too many casualties will result in failure.",
+              "Any civilian casualties will result in mission failure."
             ],
 
     "template":
             [
-               "${intro_template} Their mission is to ${mission_template} ${bonus_template} ${completion_template}",
-               "${intro_template} The mission is to ${mission_template} ${bonus_template} ${completion_template}"
+              "${intro_template} The mission is to ${mission_template} ${bonus_template} ${completion_template}",
+              "${intro_template} The mission is to ${mission_template} ${completion_template} ${bonus_template}",
+              "${intro_template} The mission is to ${mission_template} ${bonus_template} ${bonus_template} ${completion_template}"
             ]
 
 }

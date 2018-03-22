@@ -60,7 +60,6 @@ class Arma:
                 return re.sub(r'\$\{(\w+)\}', replace, template)
 
             mission_string = randomly_generated('template')
-
             return mission_string
 
         await self.bot.say(generate_random_mission(data_dictionary))
