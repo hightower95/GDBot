@@ -1,15 +1,17 @@
 {
     "operation_name":
-            ["Janice", "Touchdown", "Wolf", "Overwelm", "Roofclimb", "Thin Ice", "Fallout",
-             "Juliet", "Bullet Magnet", "Head West"],
+            ["Janice", "Touchdown", "Wolf", "Overwelm", "Roofclimb", "Thin Ice", "Fallout", "Juliet",
+              "Bullet Magnet", "Head West", "Jaguar", "Bananas", "Hippopotamus", "Swedish Meatballs",
+              "Trash Collection", "Rock And Roll", "Dangerously General", "Pub Crawl", "Kamakaze"],
 
     "tod":
             ["afternoon", "morning", "evening", "night", "day"],
 
     "setting":
-            ["during the ${tod}", "in the ${tod}", "at dusk", "at dawn", "during a solar eclipse",
-              "on a moonlit night", "during a thunderstorm", "on a rainy afternoon", "on a calm, peaceful Tuesday",
-              "in the morning", "in the afternoon", "on a windy"
+            ["during the ${tod}", "in the ${tod}", "on a rainy ${tod}", "on a clear ${tod}", "on a windy ${tod}",
+              "on an overcast ${tod}",
+              "at dusk", "at dawn", "during a solar eclipse", "on a moonlit night", "during a thunderstorm",
+              "on a calm, peaceful Tuesday", "on Christmas Eve"
             ],
 
     "faction":
@@ -24,14 +26,18 @@
               "compound",
               "school building",
               "outpost",
-              "aircraft hanger"
+              "aircraft hanger",
+              "town square",
+              "police station",
+              "fire station"
             ],
 
     "location_mid":
             [
               "village",
               "FOB",
-              "airfield"
+              "airfield",
+              "neighborhood"
             ],
 
     "location_large":
@@ -45,20 +51,35 @@
               "submersible",
               "APC",
               "technical",
-              "boat",
+              "assault boat",
               "personnel truck",
               "jetski"
             ],
 
+    "vehicle":
+            [
+              "attack helicopter",
+              "tank",
+              "APC",
+              "technical",
+              "jet",
+              "speedboat"
+            ],
+
     "support":
             [
-              "tank",
+              "armour",
               "attack helicopter",
               "mortar",
               "CAS",
               "artillery",
               "UAV recon",
               "UAV attack"
+            ],
+
+    "equipment":
+            [
+              "radios", "NVGs", "optics"
             ],
 
     "squad_support":
@@ -76,7 +97,8 @@
               "ammo cache",
               "fuel truck",
               "mortar position",
-              "helicopter"
+              "helicopter",
+              "radio tower"
             ],
 
     "intel":
@@ -92,7 +114,30 @@
               "a small group of captured journalists",
               "allied POWs",
               "the President",
-              "Janice"
+              "Bravo squad",
+              "a VIP called Janice",
+              "Cilax's cat"
+            ],
+
+    "support_template":
+            [
+              "The squad is operating in enemy territory and so there is no support available.",
+              "There is ${support} support available.",
+              "For extra support, the squad has ${squad_support}."
+            ],
+
+    "enemy_template":
+            [
+              "Enemy forces are likely to be fielding ${vehicle}s.",
+              "Enemy reinforcements can be expected from a nearby base.",
+              "The enemy are well fortified with bunkers and sandbags."
+            ],
+
+    "equipment_template":
+            [
+              "The squad's ${equipment} have malfunctioned and won't be available.",
+              "Due to budget cuts, there are no ${equipment} available for this mission.",
+              "Ammo supplies are low, an ammo cache has been airdropped nearby."
             ],
 
     "intro_template":
@@ -106,27 +151,28 @@
               "attack an enemy ${location_small} and retrieve ${intel}.",
               "assault an enemy ${location_small} and rescue ${hostages}.",
               "defend a friendly ${location_small} from incoming forces.",
-              "find and destroy an enemy ${target} in a nearby ${location_mid}."
+              "find and destroy an enemy ${target} in a nearby ${location_mid}.",
+              "destroy multiple known enemy ${target}s in a nearby ${location_large}."
             ],
 
-    "support_template":
+    "bonus_template":
             [
-              "They are operating in enemy territory and so there is no support available.",
-              "There is ${support} support available if necessary.",
-              "For extra support, the squad has ${squad_support}.",
-              "Unfortunately, all the radios have simultaneously run out of batteries."
+              "${support_template}",
+              "${enemy_template}",
+              "${equipment_template}"
             ],
 
     "completion_template":
             [
               "This is a time limited mission, so the squad must hurry!",
-              "The squad must complete their objectives and extract via ${transport_vehicle}"
+              "The squad must complete their objectives and extract via ${transport_vehicle}.",
+              "Medical supplies are low and too many casualties will result in failure."
             ],
 
     "template":
             [
-               "${intro_template} Their mission is to ${mission_template} ${support_template} ${completion_template}",
-               "${intro_template} The mission is to ${mission_template} ${support_template} ${completion_template}"
+               "${intro_template} Their mission is to ${mission_template} ${bonus_template} ${completion_template}",
+               "${intro_template} The mission is to ${mission_template} ${bonus_template} ${completion_template}"
             ]
 
 }
