@@ -41,6 +41,33 @@ class Arma:
                            "https://docs.google.com/spreadsheets/d/"
                            "1_txOtbOIbEZFMsIJjjZrAVtgn8L7o0P4kkEinOpsck4/edit?usp=sharing")
 
+    @commands.command()
+    async def mission_idea(self, *args):
+        """Get a randomly generator mission idea"""
+
+        import json
+
+        data_dictionary = json.load(open('../data/mission_generator.json'))
+
+        def generate_random_mission(data):
+            import random
+            import re
+
+            def randomly_generated(nt):
+                template = random.choice(data[nt])
+
+                def replace(match):
+                    return randomly_generated(match.group(1))
+
+                return re.sub(r'\$\{(\w+)\}', replace, template)
+
+            mission_string = ''
+            mission_string += randomly_generated('template')
+
+            return mission_string
+
+        await self.bot.say(generate_random_mission(data_dictionary))
+
 
 def setup(bot):
     bot.add_cog(Arma(bot))

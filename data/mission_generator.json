@@ -1,0 +1,132 @@
+{
+    "operation_name":
+            ["Janice", "Touchdown", "Wolf", "Overwelm", "Roofclimb", "Thin Ice", "Fallout",
+             "Juliet", "Bullet Magnet", "Head West"],
+
+    "tod":
+            ["afternoon", "morning", "evening", "night", "day"],
+
+    "setting":
+            ["during the ${tod}", "in the ${tod}", "at dusk", "at dawn", "during a solar eclipse",
+              "on a moonlit night", "during a thunderstorm", "on a rainy afternoon", "on a calm, peaceful Tuesday",
+              "in the morning", "in the afternoon", "on a windy"
+            ],
+
+    "faction":
+            [
+              "US",
+              "Russian",
+              "Police"
+            ],
+
+    "location_small":
+            [
+              "compound",
+              "school building",
+              "outpost",
+              "aircraft hanger"
+            ],
+
+    "location_mid":
+            [
+              "village",
+              "FOB",
+              "airfield"
+            ],
+
+    "location_large":
+            [
+              "town"
+            ],
+
+    "transport_vehicle":
+            [
+              "helicopter",
+              "submersible",
+              "APC",
+              "technical",
+              "boat",
+              "personnel truck",
+              "jetski"
+            ],
+
+    "support":
+            [
+              "tank",
+              "attack helicopter",
+              "mortar",
+              "CAS",
+              "artillery",
+              "UAV recon",
+              "UAV attack"
+            ],
+
+    "squad_support":
+            [
+              "a recon/sniper team",
+              "a portable MG",
+              "a backpack full of bananas"
+            ],
+
+    "target":
+            [
+              "AA installation",
+              "motor pool",
+              "bomb-making facility",
+              "ammo cache",
+              "fuel truck",
+              "mortar position",
+              "helicopter"
+            ],
+
+    "intel":
+            [
+              "a laptop containing enemy plans",
+              "top secret documents",
+              "some compromising photographs",
+              "JSD's cornflakes"
+            ],
+
+    "hostages":
+            [
+              "a small group of captured journalists",
+              "allied POWs",
+              "the President",
+              "Janice"
+            ],
+
+    "intro_template":
+            [
+              "**Operation ${operation_name}**: An elite ${faction} squad is being deployed via ${transport_vehicle} ${setting}.",
+              "**Operation ${operation_name}**: Bravo squad have botched their mission again and our ${faction} squad have to clean up the mess."
+            ],
+
+    "mission_template":
+            [
+              "attack an enemy ${location_small} and retrieve ${intel}.",
+              "assault an enemy ${location_small} and rescue ${hostages}.",
+              "defend a friendly ${location_small} from incoming forces.",
+              "find and destroy an enemy ${target} in a nearby ${location_mid}."
+            ],
+
+    "support_template":
+            [
+              "They are operating in enemy territory and so there is no support available.",
+              "There is ${support} support available if necessary.",
+              "For extra support, the squad has ${squad_support}.",
+              "Unfortunately, all the radios have simultaneously run out of batteries."
+            ],
+
+    "completion_template":
+            [
+              "This is a time limited mission, so the squad must hurry!",
+              "The squad must complete their objectives and extract via ${transport_vehicle}"
+            ],
+
+    "template":
+            [
+               "${intro_template} Their mission is to ${mission_template} ${support_template} ${completion_template}",
+               "${intro_template} The mission is to ${mission_template} ${support_template} ${completion_template}"
+            ]
+
+}
