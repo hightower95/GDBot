@@ -1,8 +1,13 @@
 {
     "operation_name":
-            ["Janice", "Touchdown", "Wolf", "Overwelm", "Roofclimb", "Thin Ice", "Fallout", "Juliet",
+            ["Janice", "Roof Climber", "Walk The Dog",
               "Bullet Magnet", "Head West", "Jaguar", "Bananas", "Hippopotamus", "Swedish Meatballs",
-              "Trash Collection", "Rock And Roll", "Dangerously General", "Pub Crawl", "Kamakaze"],
+              "Trash Collection", "Rock And Roll", "Dangerously General", "Pub Crawl", "Kamakaze",
+              "Watchtower", "Purple Rhino", "Unicorn", "Cornflakes", "Flintlock", "Sherlock",
+              "Exchange Student", "Rolling Enthusiasm", "Budget Airline", "Bumpy Ride", "Fast and Furious",
+              "Ominous Foreboding", "Cute Diversion", "Awkward Feeling", "Choppa", "Routine Patrol",
+              "Unfortunate Circumstances"
+            ],
 
     "tod":
             ["afternoon", "morning", "evening", "night", "day"],
@@ -22,7 +27,7 @@
     "location_small":
             [
               "compound",
-              "school building",
+              "schoolhouse",
               "outpost",
               "aircraft hanger",
               "town square",
@@ -96,6 +101,7 @@
               "a recon/sniper team",
               "a portable MG",
               "plenty of AT",
+              "an explosives cache",
               "a backpack full of bananas"
             ],
 
@@ -111,14 +117,18 @@
               "radio tower",
               "experimental aircraft",
               "command centre",
-              "weapons cache"
+              "weapons cache",
+              "chemical weapons lab"
             ],
 
     "intel":
             [
               "a laptop containing enemy plans",
               "top secret documents",
+              "enemy flight plans",
+              "experimental weapons blueprints",
               "some compromising photographs",
+              "the death star plans",
               "JSD's cornflakes"
             ],
 
@@ -129,14 +139,17 @@
               "the President",
               "Bravo squad",
               "a VIP called Janice",
-              "a friendly injured squad"
+              "a friendly injured squad",
+              "a downed helicopter crew",
+              "a group of imprisoned tourists",
+              "several high ranking officers"
             ],
 
     "support_template":
             [
               "There is ${support} support available.",
               "For extra support, the squad has ${squad_support}.",
-              "The squad has vehicle support from a ${vehicle}"
+              "The squad has vehicle support from a ${vehicle}."
             ],
 
     "enemy_template":
@@ -162,7 +175,8 @@
               "**Operation ${operation_name}**: An elite ${faction} squad is being deployed via ${transport_vehicle} ${setting}.",
               "**Operation ${operation_name}**: Bravo squad have botched their mission again and our ${faction} squad have to clean up the mess.",
               "**Operation ${operation_name}**: In response to enemy movements, ${faction} forces are deploying a squad via ${transport_vehicle} ${setting}.",
-              "**Operation ${operation_name}**: During a routine patrol ${setting}, our ${faction} squad has received an urgent message from HQ."
+              "**Operation ${operation_name}**: During a routine patrol ${setting}, our squad has received an urgent message from ${faction} forces HQ.",
+              "**Operation ${operation_name}**: As part of a wider assault by ${faction} forces, our squad has been selected for an important task."
             ],
 
     "mission_template":
