@@ -36,6 +36,10 @@ def add_ha_log_entry(author, message):
 
     log_string = time_now + ' | ' + str(author) + ' | ' + str(stripped_message)
 
+    # Creates path if it doesn't already exist
+    if not os.path.exists('../logs/'):
+        os.makedirs('../logs/')
+
     with open(ha_log_path, 'a+') as log_file:
         log_file.write(log_string+'\n')
 
@@ -176,8 +180,6 @@ class Arma:
 
     @upload.error
     async def upload_error(self, error, *args):
-        print(error)
-        print(args)
 
         if isinstance(error, commands.CheckFailure):
             await self.bot.say("You do not have the required role to upload missions.")
@@ -396,6 +398,8 @@ async def download_file(url, file_name, file_extension, download_path):
 async def check_duplicates(file_name):
 
     import re
+
+    # TODO specify whether duplicate is in the holding area or on the server
 
     # Creates path if it doesn't already exist
     if not os.path.exists(config.holding_area_path):
