@@ -6,8 +6,21 @@
 # This is your Discord bot account token.
 Token = None
 
+[General]
+# This is the discord bot owner - gives them access to all commands + admin commands
+OwnerID = None
+AdminRole = Admin
+
 [Chat]
 # Determines the prefix that must be used before commands in the Discord chat.
 # e.g if you set this to *, the play command would be triggered using *play.
 CommandPrefix = !
 AnnouncementChannelID = None
+
+[Arma]
+MissionUploadChannelID = None
+HoldingAreaPath = ..\\..\\..\\mission_holding_area\\
+ServerMissionsPath = ..\\server_missions\\
+# Roles required to upload and manage missions on the server - case sensitive
+MissionUploadRole = Admin
+MissionManageRole = Admin
