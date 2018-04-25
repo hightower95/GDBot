@@ -1,11 +1,17 @@
+#!/usr/bin/env python
+
+"""
+Main file for GDBot - loads the configuration and any plugins in the ./plugins/ folder and starts the bot
+"""
+
+from config import Config
+
 import discord
 from discord.ext.commands import Bot
 import platform
 import glob
 import os
 import shutil
-
-from config import Config, ConfigDefaults
 
 
 if __name__ == "__main__":

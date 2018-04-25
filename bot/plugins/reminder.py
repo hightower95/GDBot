@@ -1,14 +1,17 @@
+#!/usr/bin/env python
+
+"""
+Plugin for sending reminders to a discord server's announcements channel
+"""
+
+from config import Config
+
 import discord
 import asyncio
 from datetime import datetime
 import calendar
 from pytz import timezone
 
-from config import Config, ConfigDefaults
-
-'''
-Plugin which sends reminders to a discord server's announcements channel
-'''
 
 # Load the configuration file
 config = Config('../config/config.ini')

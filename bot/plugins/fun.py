@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+
+"""
+Plugin providing some fun commands
+"""
+
 import discord
 from discord.ext import commands
-
-'''
-Just some fun bot commands and functions
-'''
 
 
 class Fun:

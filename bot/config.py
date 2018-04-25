@@ -1,8 +1,12 @@
-import configparser
+#!/usr/bin/env python
 
-'''
-Configuration file reader
-'''
+"""
+Main configuration file for GDBot.
+Loads the configuration file and sets up configuration variables. Also contains default options if the configuration
+variables are absent from the config.ini
+"""
+
+import configparser
 
 
 class Config:

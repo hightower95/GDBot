@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+
+"""
+Plugin for providing information about and interaction with the Generally Dangerous Arma 3 server.
+"""
+
 from config import Config
 
 import discord
@@ -9,12 +15,6 @@ except:
     import pip
     pip.main(['install', 'requests'])
     import requests
-
-
-'''
-Plugin currently for providing information about the Generally Dangerous Arma 3 server
-Future plans for this plugin involve interaction with the server itself
-'''
 
 # TODO Check the necessary roles exist and warn/create them if they don't
 # TODO Group the info commands

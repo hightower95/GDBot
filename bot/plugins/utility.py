@@ -1,10 +1,18 @@
+#!/usr/bin/env python
+
+"""
+Plugin providing a selection of useful commands and functions
+"""
+
+from config import Config
+
 from discord.ext import commands
 from datetime import datetime
 from pytz import timezone
 
-'''
-A few useful commands and functions
-'''
+
+# Load the configuration file
+config = Config('../config/config.ini')
 
 
 class Utility:
