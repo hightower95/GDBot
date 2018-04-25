@@ -220,7 +220,8 @@ class Arma:
             if iden == int(mission_id):
                 mission_file_name = mission_name
 
-        await self.bot.say("The mission: " + mission_file_name + " has been approved and moved onto the live server.")
+        await self.bot.say("The mission: **" + mission_file_name + "** has been approved and moved onto the "
+                           "live server.")
 
         # moving the mission to the server folder and removing the mission from the register
         os.rename(download_path+mission_file_name, server_missions_path+mission_file_name)
