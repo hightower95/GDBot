@@ -175,7 +175,9 @@ class Arma:
                                + config.command_prefix + 'upload" in the comments.')
 
     @upload.error
-    async def role_test_error(self, error, *args):
+    async def upload_error(self, error, *args):
+        print(error)
+        print(args)
 
         if isinstance(error, commands.CheckFailure):
             await self.bot.say("You do not have the required role to upload missions.")
