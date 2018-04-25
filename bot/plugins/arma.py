@@ -395,6 +395,14 @@ async def check_duplicates(file_name):
 
     import re
 
+    # Creates path if it doesn't already exist
+    if not os.path.exists(config.holding_area_path):
+        os.makedirs(config.holding_area_path)
+
+    # Creates path if it doesn't already exist
+    if not os.path.exists(config.server_missions_path):
+        os.makedirs(config.server_missions_path)
+
     holding_path = config.holding_area_path
     server_path = config.server_missions_path
 
@@ -420,6 +428,10 @@ async def verify_mission_register():
     import os
 
     download_path = config.holding_area_path
+
+    # Creates path if it doesn't already exist
+    if not os.path.exists(download_path):
+        os.makedirs(download_path)
 
     # Read the holding area register, if it isn't there then create it
     try:
